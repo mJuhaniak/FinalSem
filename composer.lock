@@ -4,8 +4,111 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1977051b49d89ae791d6e0530147f55d",
+    "content-hash": "fad2eb2faee09e59f1eec2a962a39fae",
     "packages": [
+        {
+            "name": "aginev/datagrid",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aginev/datagrid.git",
+                "reference": "c8b5ffa45329248b55552286f7b69697e1c29961"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aginev/datagrid/zipball/c8b5ffa45329248b55552286f7b69697e1c29961",
+                "reference": "c8b5ffa45329248b55552286f7b69697e1c29961",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0|^8.0",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Aginev\\Datagrid\\DatagridServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aginev\\Datagrid\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atanas Ginev",
+                    "email": "naskospam@gmail.com"
+                }
+            ],
+            "description": "Datagrid Package for Laravel v5+",
+            "homepage": "http://aginev.com",
+            "keywords": [
+                "datagrid"
+            ],
+            "support": {
+                "issues": "https://github.com/aginev/datagrid/issues",
+                "source": "https://github.com/aginev/datagrid/tree/2.0.0"
+            },
+            "time": "2020-09-17T12:28:13+00:00"
+        },
+        {
+            "name": "aginev/search-filters",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aginev/search-filters.git",
+                "reference": "bd8f43108287313a0320b79cb952528f77dd442a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aginev/search-filters/zipball/bd8f43108287313a0320b79cb952528f77dd442a",
+                "reference": "bd8f43108287313a0320b79cb952528f77dd442a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Aginev\\Datagrid\\DatagridServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aginev\\SearchFilters\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Atanas Ginev",
+                    "email": "naskospam@gmail.com"
+                }
+            ],
+            "description": "Easily apply search criteria on Laravel 5+ queries",
+            "homepage": "http://aginev.com",
+            "keywords": [
+                "search filters"
+            ],
+            "support": {
+                "issues": "https://github.com/aginev/search-filters/issues",
+                "source": "https://github.com/aginev/search-filters/tree/1.0.0"
+            },
+            "time": "2020-09-17T13:45:30+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.2",
@@ -5427,6 +5530,64 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2020-12-07T20:58:56+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "444072cb2f8baaa15172c5cde2bd30d188c3b7e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/444072cb2f8baaa15172c5cde2bd30d188c3b7e7",
+                "reference": "444072cb2f8baaa15172c5cde2bd30d188c3b7e7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.0",
+                "illuminate/filesystem": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/ui/issues",
+                "source": "https://github.com/laravel/ui/tree/v3.1.0"
+            },
+            "time": "2020-11-03T19:51:21+00:00"
         },
         {
             "name": "maximebf/debugbar",
