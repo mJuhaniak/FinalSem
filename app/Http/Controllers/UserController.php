@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(\App\Models\User::class, 'user');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -52,6 +57,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,',
+            'password' => 'required|min:6|confirmed']);
+
         $user = \App\Models\User::create($request->all());
         $user->save();
         return redirect()->route('user.index');
@@ -71,34 +81,46 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(\App\Models\User $user)
     {
-        //
+        $user->password = '';
+        return view('user.edit', [
+            'action' => route('user.update', $user->id),
+            'method' => 'put',
+            'model' => $user
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, \App\Models\User $user)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,' . $user->id,
+            'password' => 'required|min:6|confirmed']);
+
+        $user->update($request->all());
+        return redirect()->route('user.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(\App\Models\User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('user.index');
     }
 }
