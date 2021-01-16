@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // ak chcem prejst na jednu zo stranok z tohto controllera, premseruje ma to najprv na login
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+    }
+    public function reservation()
+    {
+        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+    }
+
+    public function contact(){
+
+        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+    }
+
+    public function gallery()
+    {
+        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+    }
+
+    public function info()
+    {
+        return view('info', ['name' => 'Úvod', 'info' => 'textÚvod']);
     }
 }
