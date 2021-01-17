@@ -37,7 +37,7 @@ class UserController extends Controller
     }
 
     public function profile() {
-        return view('user.profile');
+        return view('user.profile.index')->with('user', auth()->user());
     }
 
     /**
@@ -68,7 +68,7 @@ class UserController extends Controller
 
         $user = \App\Models\User::create($request->all());
         $user->save();
-        return useredirect()->route('r.index');
+        return redirect()->route('user.index');
     }
 
     /**

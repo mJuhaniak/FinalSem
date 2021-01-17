@@ -38,7 +38,7 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('gallery', ['name' => 'Galeria', 'info' => 'textGaleria']);
+        return view('gallery', ['name' => 'Galéria', 'info' => 'textGaléria']);
     }
 
     public function info()
