@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-    profil
+    @include('layouts.main')
+
 @endsection

@@ -36,6 +36,10 @@ class UserController extends Controller
         ]);
     }
 
+    public function profile() {
+        return view('user.profile');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -64,7 +68,7 @@ class UserController extends Controller
 
         $user = \App\Models\User::create($request->all());
         $user->save();
-        return redirect()->route('user.index');
+        return useredirect()->route('r.index');
     }
 
     /**

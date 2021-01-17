@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel = "icon" href="{{ (url('pictures/logo.png')) }}" type="image/x-icon">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -38,8 +40,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('info') }}">{{ __('Info') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('gallery') }}">{{ __('Galéria') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Kontakt') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('reservations') }}">{{ __('Rezervácie') }}</a>
+                        </li>
                         @can('viewAny', \App\Models\User::class)
-                            <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
+                            <a class="nav-link" href="{{ route('user.index') }}">{{ __('Užívatelia') }}</a>
+                            <a class="nav-link" href="{{ route('user.index') }}">{{ __('Chaty') }}</a>
                         @endcan
                     </ul>
 
@@ -65,6 +77,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">{{ __('Profile') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -81,9 +94,7 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @yield('content')
     </div>
 </body>
 </html>

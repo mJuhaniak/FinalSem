@@ -26,23 +26,23 @@ class HomeController extends Controller
     {
         return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
     }
-    public function reservation()
+
+    public function reservations()
     {
-        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+        return view('reservations', ['name' => 'Rezervácie', 'info' => 'textRezervácie']);
     }
 
     public function contact(){
-
-        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+        return view('contact', ['name' => 'Kontakt', 'info' => 'textKontakt']);
     }
 
     public function gallery()
     {
-        return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
+        return view('gallery', ['name' => 'Galeria', 'info' => 'textGaleria']);
     }
 
     public function info()
     {
-        return view('info', ['name' => 'Úvod', 'info' => 'textÚvod']);
+        return view('info', ['name' => 'Info', 'info' => 'textInfo']);
     }
 }
