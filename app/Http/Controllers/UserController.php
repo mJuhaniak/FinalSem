@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Aginev\Datagrid\Datagrid;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -37,7 +38,13 @@ class UserController extends Controller
     }
 
     public function profile() {
-        return view('user.profile.index')->with('user', auth()->user());
+        $user = Auth::user();
+        $user->password = '';
+        return view('user.profile.index', [
+            'action' => route('user.update', $user->id),
+            'method' => 'put',
+            'model' => $user
+        ]);
     }
 
     /**
@@ -113,7 +120,7 @@ class UserController extends Controller
             'password' => 'required|min:6|confirmed']);
 
         $user->update($request->all());
-        return redirect()->route('user.index');
+        return back();
     }
 
     /**

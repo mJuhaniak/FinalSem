@@ -30,6 +30,7 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
+        return true;
     }
 
     /**
@@ -52,7 +53,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return Auth::user()->name == 'admin';
+        return true;
     }
 
     /**

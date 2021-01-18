@@ -17,5 +17,6 @@ class Cabin extends Model
     protected $fillable = [
         'name',
         'capacity',
+        'info'
     ];
 }

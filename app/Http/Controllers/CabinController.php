@@ -12,8 +12,9 @@ class CabinController extends Controller
         $cabins = Cabin::paginate(10);
         $grid = new Datagrid($cabins, $request->get('f', []));
 
-        $grid->setColumn('name', 'Cabin name')
-            ->setColumn('capacity', 'Capacity')
+        $grid->setColumn('name', 'Názov chaty')
+            ->setColumn('capacity', 'Kapacita')
+            ->setColumn('info', 'Popis')
             ->setActionColumn([
                 'wrapper' => function ($value, $row) {
                     return '<a href="' . route('cabin.edit', [$row->id]) . '" title="Edit" class="btn btn-sm btn-primary">Edit</a>
@@ -21,6 +22,15 @@ class CabinController extends Controller
                 }
             ]);
         return view('cabin.index', ['grid' => $grid
+        ]);
+    }
+
+    public function show() {
+        $cabins = Cabin::all();
+        return view('cabin', [
+            'name' => 'Ubytovanie',
+            'info' => 'textUbytovanie',
+            'cabins' => $cabins
         ]);
     }
 
@@ -46,8 +56,9 @@ class CabinController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'capacity' => 'required']);
+            'name' => 'required|unique:cabins,name',
+            'capacity' => 'required',
+            'info' => 'required']);
 
         $cabin = Cabin::create($request->all());
         $cabin->save();
@@ -80,7 +91,8 @@ class CabinController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'capacity' => 'required']);
+            'capacity' => 'required',
+            'info' => 'required']);
 
         $cabin->update($request->all());
         return redirect()->route('cabin.index');

@@ -10,21 +10,21 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="{{ (url('pictures/slideShow1.jpg')) }}" alt="First slide">
-            <div class="content centered">
+            <div class="slideContent centered">
                 <h1><?php echo $name; ?></h1>
                 <p><?php echo $info; ?></p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="{{ (url('pictures/slideShow2.jpg')) }}" alt="Second slide">
-            <div class="content centered">
+            <div class="slideContent centered">
                 <h1><?php echo $name; ?></h1>
                 <p><?php echo $info; ?></p>
             </div>
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="{{ (url('pictures/slideShow3.webp')) }}" alt="Third slide">
-            <div class="content centered">
+            <div class="slideContent centered">
                 <h1><?php echo $name; ?></h1>
                 <p><?php echo $info; ?></p>
             </div>

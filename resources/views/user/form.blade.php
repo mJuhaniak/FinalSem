@@ -7,19 +7,20 @@
     @csrf
     @method($method)
     <div class="form-group">
-        <label for="name">Full name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Full name" value="{{ old('name', @$model->name) }}">
+        <label for="name">Celé meno</label>
+        <input type="text" class="form-control" id="name" name="name"  pattern="^[A-Z]{1}[a-zA-Z-]+\s[A-Z]{1}[a-zA-Z-]+$" title="Zadajte meno a priezvisko oddelené medzerou a s veľkým začiatočným písmenom"
+               placeholder="Full name" value="{{ old('name', @$model->name) }}">
     </div>
     <div class="form-group">
-        <label for="email">Email address</label>
+        <label for="email">Email</label>
         <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{ old('name', @$model->email) }}">
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
+        <label for="password">Heslo</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="password">
     </div>
     <div class="form-group">
-        <label for="password">Password again</label>
+        <label for="password">Potvrďte heslo</label>
         <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="password">
     </div>
     <div class="form-group">

@@ -44,10 +44,7 @@
                             <a class="nav-link" href="{{ route('gallery') }}">{{ __('Galéria') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Kontakt') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('reservations') }}">{{ __('Rezervácie') }}</a>
+                            <a class="nav-link" href="{{ route('cabin') }}">{{ __('Ubytovanie') }}</a>
                         </li>
                         @can('viewAny', \App\Models\User::class)
                             <a class="nav-link" href="{{ route('user.index') }}">{{ __('Užívatelia') }}</a>
@@ -61,13 +58,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Prihlásiť') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrácia') }}</a>
                                 </li>
                             @endif
                         @else
@@ -77,11 +74,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('user.profile') }}">{{ __('Profile') }}</a>
+                                    <a class="dropdown-item" href="{{ route('user.profile', Auth::id()) }}">{{ __('Profil') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Odhlásiť') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

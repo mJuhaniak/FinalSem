@@ -27,15 +27,6 @@ class HomeController extends Controller
         return view('home', ['name' => 'Úvod', 'info' => 'textÚvod']);
     }
 
-    public function reservations()
-    {
-        return view('reservations', ['name' => 'Rezervácie', 'info' => 'textRezervácie']);
-    }
-
-    public function contact(){
-        return view('contact', ['name' => 'Kontakt', 'info' => 'textKontakt']);
-    }
-
     public function gallery()
     {
         return view('gallery', ['name' => 'Galéria', 'info' => 'textGaléria']);
