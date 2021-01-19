@@ -6,9 +6,8 @@
         <div class="col-md-3">
         <div class="sidebar">
             <a href="{{ route('user.profile', Auth::id()) }}">Profil</a>
-            <a href="#news">Rezervácie</a>
-            <a href="#contact">História</a>
-            <a href="#about">Zmazať účet</a>
+            <a href="{{ route('user.reservations', Auth::id()) }}">Rezervácie</a>
+            <a href="{{ route('user.delete', Auth::id()) }}">Zmazať účet</a>
         </div>
         </div>
         <div class="col-md-6 pt-4">

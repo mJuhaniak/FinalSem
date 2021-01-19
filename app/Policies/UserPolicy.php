@@ -65,7 +65,7 @@ class UserPolicy
      */
     public function delete(User $user, User $model)
     {
-        return Auth::user()->name == 'admin';
+        return Auth::user()->name == 'admin' || Auth::user()->id == $model->id;
     }
 
     /**

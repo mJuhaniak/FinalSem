@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44b2a52-a988-4ebf-9d07-28540e072df4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b57cca8d-2cc5-47c4-b3ad-581e1c5bcecd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b57cca8d-2cc5-47c4-b3ad-581e1c5bcecd.xml" afterDir="false" />
+    <list default="true" id="e44b2a52-a988-4ebf-9d07-28540e072df4" name="Default Changelist" comment="Zalozka chaty s vypisom vsetkych chat, moznost vytvorenia rezervacie prihlasenym aj neprihlasenym pouzivatelom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CabinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CabinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cabin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cabin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_164713_create_cabins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_164713_create_cabins_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_17_003900_create_reservations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_003900_create_reservations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cabin/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabin/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reservations.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile/history.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile/reservations.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +206,7 @@
       <workItem from="1610915699259" duration="190000" />
       <workItem from="1610930479635" duration="930000" />
       <workItem from="1610931540563" duration="1792000" />
-      <workItem from="1610962076892" duration="30282000" />
+      <workItem from="1610962076892" duration="39647000" />
     </task>
     <task id="LOCAL-00001" summary="Laravel">
       <created>1609201956008</created>
@@ -270,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610909788250</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Zalozka chaty s vypisom vsetkych chat, moznost vytvorenia rezervacie prihlasenym aj neprihlasenym pouzivatelom">
+      <created>1611000194093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611000194093</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +282,7 @@
     <MESSAGE value="Uvod stranka, info" />
     <MESSAGE value="Povodna stranka s responzivnym dizajnom - chybaju rezervacie, profil uzivatela" />
     <MESSAGE value="Profil uzivatela" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profil uzivatela" />
+    <MESSAGE value="Zalozka chaty s vypisom vsetkych chat, moznost vytvorenia rezervacie prihlasenym aj neprihlasenym pouzivatelom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zalozka chaty s vypisom vsetkych chat, moznost vytvorenia rezervacie prihlasenym aj neprihlasenym pouzivatelom" />
   </component>
 </project>
