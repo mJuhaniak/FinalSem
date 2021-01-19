@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Aginev\Datagrid\Datagrid;
 use App\Models\Cabin;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 
 class CabinController extends Controller
@@ -106,6 +107,7 @@ class CabinController extends Controller
      */
     public function destroy(Cabin $cabin)
     {
+        Reservation::where('object_id', '=', $cabin->id)->delete();
         $cabin->delete();
         return redirect()->route('cabin.index');
     }
