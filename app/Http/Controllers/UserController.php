@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Aginev\Datagrid\Datagrid;
-use http\Client\Curl\User;
+use App\Models\Reservation;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -45,6 +46,12 @@ class UserController extends Controller
             'method' => 'put',
             'model' => $user
         ]);
+    }
+
+    public function getUserData($id) {
+        $arr['data'] = User::orderBy('id', 'asc')->get();
+        echo json_encode($arr);
+        exit;
     }
 
     /**
@@ -131,6 +138,7 @@ class UserController extends Controller
      */
     public function destroy(\App\Models\User $user)
     {
+        Reservation::where('user_id', '=', $user->id)->delete();
         $user->delete();
         return redirect()->route('user.index');
     }

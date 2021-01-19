@@ -32,6 +32,11 @@ class HomeController extends Controller
         return view('gallery', ['name' => 'Galéria', 'info' => 'textGaléria']);
     }
 
+    public function calendar()
+    {
+        return view('calendar', ['name' => 'Kalendár', 'info' => 'textKalendár']);
+    }
+
     public function info()
     {
         return view('info', ['name' => 'Info', 'info' => 'textInfo']);

@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -45,6 +46,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cabin') }}">{{ __('Ubytovanie') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('calendar') }}">{{ __('Kalendár') }}</a>
                         </li>
                         @can('viewAny', \App\Models\User::class)
                             <a class="nav-link" href="{{ route('user.index') }}">{{ __('Užívatelia') }}</a>
